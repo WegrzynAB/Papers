@@ -37,6 +37,7 @@ flavoprotMapped = flavoprot(ismember(flavoprot, model.genes));
 [~,~,constrRxnNames,~]=deleteModelGenes(model,flavoprotMapped);
 % make the model irreversible regarding these reactions. 
 [model,flavoprotRxns] = partIrrev(model,constrRxnNames);
+
 %% make all flavoprotein-related reactions consume 'cofactor'
 Sendrow = model.S(end,:);
 for i = 1:1:length(flavoprotRxns)
