@@ -33,7 +33,7 @@ model= addReaction(model,'FADisCofactor', {'fad[c]', 'cofactor'}, [-1,1] ,[0], 0
 
 flavoprotMapped = flavoprot(ismember(flavoprot, model.genes));
 
-% find the reactions in the model affected by these genes (consider boolean rules in the GPRs). 
+% find the reactions in the model affected by these genes (consider boolean rules in the GPRs).
 [~,~,constrRxnNames,~]=deleteModelGenes(model,flavoprotMapped);
 % make the model irreversible regarding these reactions. 
 [model,flavoprotRxns] = partIrrev(model,constrRxnNames);
