@@ -8,4 +8,4 @@ $These authors contributed equally.
 
 Available at: https://www.biorxiv.org/content/early/2018/08/15/343624
 
-Note: to reproduce the results from our study, additionally to our scripts, you need COBRA Toolbox https://opencobra.github.io/cobratoolbox/stable/ , and optGpSampler http://cs.ru.nl/~wmegchel/optGpSampler/
+NOTE! To reproduce the results from our study, additionally to our scripts, you need COBRA Toolbox https://opencobra.github.io/cobratoolbox/stable/ , and optGpSampler http://cs.ru.nl/~wmegchel/optGpSampler/
