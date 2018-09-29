@@ -5,15 +5,14 @@
 %% Initialize model
 clear all;
 initCobraToolbox;
-File = 'Recon22.mat' %File ='Recon3d';
+File = 'modelR3D_FAD.mat'; %'modelR3D_FAD.mat' for Recon3D 'modelR22_FAD.mat' for Recon2.2
 load(File);
-
 %% Read Genes encoding enzymes that use  cofactor (provide correct pathway to your local S1_Table)
-if strcmp('Recon3d.mat',File)
-        [~, ~, raw] = xlsread('.../Supplementary_files/S1_Table.xlsx','Flavoproteins','G2:G112');
+if strcmp('modelR3D_FAD.mat',File)
+        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','G2:G112');
         model = modelR3D_FAD;
     else
-        [~, ~, raw] = xlsread('.../Supplementary_files/S1_Table.xlsx','Flavoproteins','J2:J112');
+        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','J2:J112');
         model = modelR22_FAD;
 end
 
@@ -29,12 +28,12 @@ model = removeRxns(model, 'sink_fad[c]');
 model = removeRxns(model, 'EX_fad[c]');
 model = removeRxns(model, 'EX_fad[e]');
 
-model= addReaction(model,'FADisCofactor', {'fad[c]', 'cofactor'}, [-1,1] ,[0], 0, 1000);
-
+model= addReaction(model,'FADisCofactor', {'fad[c]', 'cofactor'}, [-1,1] ,0, 0, 1000);
+%model.subSystems(end) = {''};
 flavoprotMapped = flavoprot(ismember(flavoprot, model.genes));
 
 % find the reactions in the model affected by these genes (consider boolean rules in the GPRs).
-[~,~,constrRxnNames,~]=deleteModelGenes(model,flavoprotMapped);
+[~,~,constrRxnNames,~] = deleteModelGenes(model,flavoprotMapped);
 % make the model irreversible regarding these reactions. 
 [model,flavoprotRxns] = partIrrev(model,constrRxnNames);
 
@@ -49,12 +48,14 @@ end
 model.S(end,:) = Sendrow;
 
 %% save results
-if strcmp('Recon3d.mat',File)
+if strcmp('modelR3D_FAD.mat',File)
         modelR3D_flavo = model;
         save  'modelR3D_flavo.mat' modelR3D_flavo
+        clearvars -except modelR3D modelR3D_FAD modelR3D_flavo flavoprotMapped;
     else
         modelR22_flavo = model; 
         save  'modelR22_flavo.mat' modelR22_flavo 
+        clearvars -except modelR22 modelR22_FAD modelR22_flavo flavoprotMapped;
 end
-        
-   
+%% test results
+CofSensTest;
