@@ -1,13 +1,13 @@
-%% testing sensitivity of the system to cofactor stoichiometry
-File = 'modelR3D_FAD.mat'; %'modelR3D_FAD.mat' for Recon3D 'modelR22_FAD' for Recon2.2
-%load(File);
+%% testing response of the system to the cofactorLimitation
+File = 'modelR22_FAD.mat'; %'modelR3D_FAD.mat' for Recon3D 'modelR22_FAD' for Recon2.2
+load(File);
 %% Read Genes encoding enzymes that use  cofactor (provide correct pathway to your local S1_Table)
 if strcmp('modelR3D_FAD.mat',File)
-        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','G2:G112');
+        [~, ~, raw] = xlsread('S1_Table.xlsx','Flavoproteins','G2:G112');
         ctrl = modelR3D_FAD;
         model = modelR3D_flavo;
     else
-        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','J2:J112');
+        [~, ~, raw] = xlsread('S1_Table.xlsx','Flavoproteins','J2:J112');
         ctrl = modelR22_FAD;
         model = modelR22_flavo;
 end
