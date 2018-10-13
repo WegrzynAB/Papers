@@ -26,6 +26,8 @@ To introduce cofactor dependency in the FAD model use: Fig4_cofactorLimitation.m
 
 <b>Fig. 5.</b> Changes in the ATP yield from different carbon sources in flavoprotein-related diseases predict metabolic adaptations in energy metabolism.
 
+Changes to the ATP yields in diseases were tested by introducing a gene knockout and then testing the model with methods developped by Neil Swainston: https://sourceforge.net/p/mcisb/code/HEAD/tree/manchester-recon/src/matlab/ .
+
 <b>Table. 2, Table. S3, and Fig. S3</b> Metabolic biomarkers for flavoprotein-related diseases.
 
 For Recon2.04 and Recon3D we used the original method and files linked to the Recon2 paper (https://github.com/opencobra/COBRA.papers , 2013_Recon2 folder). For Recon2.2 we have slightly updated the scripts to work with HGNC gene identifiers, see T2_IEMAnalysisRecon22.m script. Modified script requires two files: IEM_biomarkerListR22.mat  and IEM_compendiumR22.mat that contain information about genes and biomarkers asociated with the diseases. 
