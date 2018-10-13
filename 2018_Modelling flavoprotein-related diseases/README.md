@@ -18,6 +18,8 @@ To reproduce the data please run the Fig2_flavoproteomeMapping.m script. Table S
 
 <b>Fig. 3., Fig. S2., and Fig S5.</b> New models can correctly simulate the physiology of MADD.
 
+Models have been sampled using optGpSampler.
+
 <b>Fig. 4. and Fig. S4.</b> Coupling of FAD-related reactions to FAD-biosynthesis enabled the new model to respond to low cofactor availability.
 
 To introduce cofactor dependency in the FAD model use: cofactorLimitation.m . By changing the cofactor coefficience in the line 43 we can test sensitivity of the metabolism to the cofactor coefficience value. To calculate the average flux through the flavoprotein-dependent reaction run the cofactorLimitationTest.m (Fig. 4B, Fig. S4). To calculate the sampled average flux through the flavoprotein-dependent reaction run the cofactorSampling.m (Fig. 4C). optGpSampler is required to run the cofactorSampling.m script. 
