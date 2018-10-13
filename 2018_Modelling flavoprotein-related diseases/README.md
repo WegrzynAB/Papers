@@ -22,7 +22,7 @@ For Recon2.2 MADD simulations use Fig3_MADDsamplingRecon22.m script (Fig.3 and F
 
 <b>Fig. 4. and Fig. S4.</b> Coupling of FAD-related reactions to FAD-biosynthesis enabled the new model to respond to low cofactor availability.
 
-To introduce cofactor dependency in the FAD model use: cofactorLimitation.m . By changing the cofactor coefficience in the line 43 we can test sensitivity of the metabolism to the cofactor coefficience value. To calculate the average flux through the flavoprotein-dependent reaction run the cofactorLimitationTest.m (Fig. 4B, Fig. S4). To calculate the sampled average flux through the flavoprotein-dependent reaction run the cofactorSampling.m (Fig. 4C). optGpSampler is required to run the cofactorSampling.m script. 
+To introduce cofactor dependency in the FAD model use: Fig4_cofactorLimitation.m . By changing the cofactor coefficience in the line 43 we can test sensitivity of the metabolism to the cofactor coefficience value. To calculate the average flux through the flavoprotein-dependent reaction run the Fig4_cofactorLimitationTest.m (Fig. 4B, Fig. S4). To calculate the sampled average flux through the flavoprotein-dependent reaction run the Fig4c_cofactorSampling.m (Fig. 4C). optGpSampler is required to run the Fig4c_cofactorSampling.m script. 
 
 <b>Fig. 5.</b> Changes in the ATP yield from different carbon sources in flavoprotein-related diseases predict metabolic adaptations in energy metabolism.
 
