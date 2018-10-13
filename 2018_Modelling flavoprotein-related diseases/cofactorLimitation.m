@@ -3,16 +3,15 @@
 %Script to calculate flux distributions on standard Recon when cofactor is limited  (FAD)
 
 %% Initialize model
-clear all;
 initCobraToolbox;
-File = 'modelR3D_FAD.mat'; %'modelR3D_FAD.mat' for Recon3D 'modelR22_FAD.mat' for Recon2.2
+File = 'modelR22_FAD.mat'; %'modelR3D_FAD.mat' for Recon3D 'modelR22_FAD.mat' for Recon2.2
 load(File);
 %% Read Genes encoding enzymes that use  cofactor (provide correct pathway to your local S1_Table)
 if strcmp('modelR3D_FAD.mat',File)
-        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','G2:G112');
+        [~, ~, raw] = xlsread('S1_Table.xlsx','Flavoproteins','G2:G112');
         model = modelR3D_FAD;
     else
-        [~, ~, raw] = xlsread('/Users/Dave/Dropbox/Cofactor Manuscript/Additional_files/S1_Table.xlsx','Flavoproteins','J2:J112');
+        [~, ~, raw] = xlsread('S1_Table.xlsx','Flavoproteins','J2:J112');
         model = modelR22_FAD;
 end
 
@@ -57,5 +56,3 @@ if strcmp('modelR3D_FAD.mat',File)
         save  'modelR22_flavo.mat' modelR22_flavo 
         clearvars -except modelR22 modelR22_FAD modelR22_flavo flavoprotMapped;
 end
-%% test results
-CofSensTest;
