@@ -18,7 +18,7 @@ To reproduce the data please run the Fig2_flavoproteomeMapping.m script. Table S
 
 <b>Fig. 3., Fig. S2., and Fig S5.</b> New models can correctly simulate the physiology of MADD.
 
-Models have been sampled using optGpSampler.
+For Recon2.2 MADD simulations use Fig3_MADDsamplingRecon22.m script (Fig.3 and Fig. S2). For Recon3D MADD simulations use FigS5_MADDsamplingRecon3D script (Fig. S5). For both scripts 'glpk' or 'gurobi' solver is required together with the optGpSampler.
 
 <b>Fig. 4. and Fig. S4.</b> Coupling of FAD-related reactions to FAD-biosynthesis enabled the new model to respond to low cofactor availability.
 
