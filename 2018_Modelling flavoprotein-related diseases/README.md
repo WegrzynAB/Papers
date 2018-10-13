@@ -12,7 +12,9 @@ Available at: https://www.biorxiv.org/content/early/2018/08/15/343624
 
 To reproduce the results from our study you need COBRA Toolbox https://opencobra.github.io/cobratoolbox/stable/, and optGpSampler http://cs.ru.nl/~wmegchel/optGpSampler/
 
-<b>Fig. 2. and Fig. S1.</b> Mapping of the flavoproteome on the models before (grey, Recon 2.2) and after curation (black, Recon 2.2_FAD or Recon 2.2_flavo).
+<b>Fig. 2. and Fig. S1.</b> Mapping of the flavoproteome on the models before (Recon 2.2) and after curation (Recon 2.2_FAD).
+
+To reproduce the data please run the Fig2_flavoproteomeMapping.m script. Table S1 contains information about the flavoprotein genes and names required to run the script (loaded withing the script). 
 
 <b>Fig. 3. and Fig. S2.</b> New models can correctly simulate the physiology of MADD.
 
