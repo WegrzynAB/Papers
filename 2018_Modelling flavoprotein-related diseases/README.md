@@ -8,9 +8,9 @@ $These authors contributed equally.
 
 Available at: https://www.biorxiv.org/content/early/2018/08/15/343624
 
-<b>Additional packages required</b>
+<b>Additional packages required!</b>
 
-To reproduce the results from our study you need COBRA Toolbox https://opencobra.github.io/cobratoolbox/stable/, and optGpSampler http://cs.ru.nl/~wmegchel/optGpSampler/
+To reproduce the results from our study you need COBRA Toolbox https://opencobra.github.io/cobratoolbox/stable/, optGpSampler http://cs.ru.nl/~wmegchel/optGpSampler/ , and scripts calculating ATP yield from a single carbon source  https://sourceforge.net/p/mcisb/code/HEAD/tree/manchester-recon/src/matlab/ .
 
 <b>Fig. 2. and Fig. S1.</b> Mapping of the flavoproteome on the models before (Recon 2.2) and after curation (Recon 2.2_FAD).
 
