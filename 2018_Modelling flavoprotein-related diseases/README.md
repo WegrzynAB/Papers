@@ -16,7 +16,7 @@ To reproduce the results from our study you need COBRA Toolbox https://opencobra
 
 To reproduce the data please run the Fig2_flavoproteomeMapping.m script. Table S1 contains information about the flavoprotein genes and names required to run the script (loaded withing the script). 
 
-<b>Fig. 3. and Fig. S2.</b> New models can correctly simulate the physiology of MADD.
+<b>Fig. 3., Fig. S2., and Fig S5.</b> New models can correctly simulate the physiology of MADD.
 
 <b>Fig. 4. and Fig. S4.</b> Coupling of FAD-related reactions to FAD-biosynthesis enabled the new model to respond to low cofactor availability.
 
@@ -26,4 +26,3 @@ To introduce cofactor dependency in the FAD model use: cofactorLimitation.m . By
 
 <b>Table. 2, Table. S3, and Fig. S3</b> Metabolic biomarkers for flavoprotein-related diseases.
 
-<b>Fig S5.</b> Recon 3D can correctly simulate the physiology of MADD after our FAD fix was applied.
